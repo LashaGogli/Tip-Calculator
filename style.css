@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@800&family=Rubik&family=Space+Mono&display=swap');
+
+.container {
+    max-width: 100vw;
+    width: 100%;
+    height: 100vh;
+    background-color: #C5E4E7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.insideContainer {
+    max-width: 920px;
+    width: 100%;
+    height: 480px;
+    background: #FFFFFF;
+    box-shadow: 0px 32px 43px rgba(79, 166, 175, 0.200735);
+    border-radius: 25px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.insideLeftContainer {
+    max-width: 413px;
+    width: 100%;
+    height: 417px;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.insideRightContainer {
+    max-width: 413px;
+    width: 100%;
+    height: 417px;
+    background-color: aqua;
+}
+
+.input-container {
+    position: relative;
+    display: inline-block;
+    background: #F3F9FA;
+    border-radius: 5px;
+    width: 100%;
+    height: 40px;
+   
+
+
+
+}
+
+.dollar-sign {
+    position: absolute;
+    left: 5px;
+    top: 5px;
+    font-size: 24px;
+    color: #00474B;
+    padding-left: 15px;
+    
+}
+
+input[type="text"] {
+    height: 100%;
+    box-sizing: border-box;
+    border: none;
+    width: 100%;
+    padding-right: 15px;
+    font-family: 'Space Mono';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 36px;
+    text-align: right;
+    color: #00474B;
+    mix-blend-mode: normal;
+    opacity: 0.35;
+    
+
+}
+
+.billP {
+    height: 24px;
+    font-family: 'Space Mono';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    color: #5E7A7D;
+    padding-top: 20px;
+}
+
+.sellectTip {
+    height: 24px;
+    font-family: 'Space Mono';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    color: #5E7A7D;
+    padding-top: 40px;
+}
+
+.percentDivs {
+
+    width: 100%;
+    height: 100px;
+    background-color: black;
+}
+
+.numberOfPeople {
+    height: 24px;
+    font-family: 'Space Mono';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    color: #5E7A7D;
+    padding-top: 40px;
+}
+.inputcontainer2{
+    position: relative;
+    display: inline-block;
+    background: #F3F9FA;
+    border-radius: 5px;
+    width: 100%;
+    height: 40px;
+}
+.numberOfPeopleImg{
+    position: absolute;
+    left: 5px;
+    top: 12px;
+    color: #00474B;
+    padding-left: 15px;
+}
