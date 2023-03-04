@@ -3,10 +3,29 @@ let reset = document.querySelector(".reset");
 
 let firstinput = document.querySelector(".firstinput");
 let firstinputvalue = 0;
-
+let percent = 0;
+let answer;
+let answer1;
 let secondinputvalue = 0;
 let secondInput = document.querySelector(".secondInput");
 
+let custominput = document.querySelector(".custominput");
+
+custominput.addEventListener("input", function () {
+    percent = custominput.value;
+
+});
+
+custominput.addEventListener("keydown", function(event) {
+    if (event.key === "Enter") {
+        answer1 = firstinputvalue / secondinputvalue * percent / 100;
+        answer1 = Math.ceil(answer1 * 100) / 100;
+        rightoneup.innerHTML = "$" + answer1;
+        answer = firstinputvalue / secondinputvalue + firstinputvalue / secondinputvalue * percent / 100;
+        answer = Math.ceil(answer * 100) / 100;
+        rightonedown.innerHTML = "$" + answer;
+    }
+  });
 
 secondInput.addEventListener("input", function () {
     secondinputvalue = secondInput.value;
@@ -26,12 +45,9 @@ reset.addEventListener("click", function () {
 
 
 let cantbezero = document.querySelector(".cantbezero");
-let percent = 0;
 let rightoneup = document.querySelector(".rightoneup");
 let rightonedown = document.querySelector(".rightonedown");
 
-let answer;
-let answer1;
 insidepercents.forEach(div => {
     div.addEventListener("click", function () {
 
