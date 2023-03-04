@@ -31,6 +31,7 @@ let rightoneup = document.querySelector(".rightoneup");
 let rightonedown = document.querySelector(".rightonedown");
 
 let answer;
+let answer1;
 insidepercents.forEach(div => {
     div.addEventListener("click", function () {
 
@@ -52,8 +53,11 @@ insidepercents.forEach(div => {
             cantbezero.style.display = "block";
         } else {
             cantbezero.style.display = "none";
-            rightoneup.innerHTML = "$" + firstinputvalue / secondinputvalue * percent / 100;
+            answer1 = firstinputvalue / secondinputvalue * percent / 100;
+            answer1 = Math.ceil(answer1 * 100) / 100;
+            rightoneup.innerHTML = "$" + answer1;
             answer = firstinputvalue / secondinputvalue + firstinputvalue / secondinputvalue * percent / 100;
+            answer = Math.ceil(answer * 100) / 100;
             rightonedown.innerHTML = "$" + answer;
 
         }
