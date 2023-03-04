@@ -341,8 +341,10 @@
     opacity: 1;
 }
 
-.insidepercents {
+.insidepercents:hover {
     cursor: pointer;
+    background-color: #26C2AE;
+    color: #00474B;
 }
 
 .custominput:hover {
