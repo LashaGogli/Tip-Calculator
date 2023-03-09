@@ -12,28 +12,63 @@ let secondInput = document.querySelector(".secondInput");
 let custominput = document.querySelector(".custominput");
 
 custominput.addEventListener("input", function () {
+    custominput.style.opacity = "1";
     percent = custominput.value;
+    reset.style.backgroundColor = "#9FE8DF";
+    reset.style.opacity = "1";
+    if (secondinputvalue == 0) {
+        cantbezero.style.display = "block";
+    } else {
+        cantbezero.style.display = "none";
+        if (secondinputvalue != 0 && firstinputvalue != 0) {
+            answer1 = firstinputvalue / secondinputvalue * percent / 100;
+            answer1 = Math.ceil(answer1 * 100) / 100;
+            rightoneup.innerHTML = "$" + answer1.toFixed(2);
+            answer = firstinputvalue / secondinputvalue + firstinputvalue / secondinputvalue * percent / 100;
+            answer = Math.ceil(answer * 100) / 100;
+            rightonedown.innerHTML = "$" + answer.toFixed(2);
+        }
+
+    }
 
 });
 
-custominput.addEventListener("keydown", function(event) {
-    if (event.key === "Enter") {
-        answer1 = firstinputvalue / secondinputvalue * percent / 100;
-        answer1 = Math.ceil(answer1 * 100) / 100;
-        rightoneup.innerHTML = "$" + answer1;
-        answer = firstinputvalue / secondinputvalue + firstinputvalue / secondinputvalue * percent / 100;
-        answer = Math.ceil(answer * 100) / 100;
-        rightonedown.innerHTML = "$" + answer;
-    }
-  });
 
 secondInput.addEventListener("input", function () {
+    cantbezero.style.display = "none";
+    secondInput.style.opacity = "1";
     secondinputvalue = secondInput.value;
+    reset.style.backgroundColor = "#9FE8DF";
+    reset.style.opacity = "1";
+    if (firstinputvalue != 0 && percent != 0) {
+        answer1 = firstinputvalue / secondinputvalue * percent / 100;
+        answer1 = Math.ceil(answer1 * 100) / 100;
+        rightoneup.innerHTML = "$" + answer1.toFixed(2);
+        answer = firstinputvalue / secondinputvalue + firstinputvalue / secondinputvalue * percent / 100;
+        answer = Math.ceil(answer * 100) / 100;
+        rightonedown.innerHTML = "$" + answer.toFixed(2);;
+
+
+    }
+
 
 });
 
 firstinput.addEventListener("input", function () {
+    firstinput.style.opacity = "1";
     firstinputvalue = firstinput.value;
+    reset.style.backgroundColor = "#9FE8DF";
+    reset.style.opacity = "1";
+    if (secondinputvalue != 0 && percent != 0) {
+        answer1 = firstinputvalue / secondinputvalue * percent / 100;
+        answer1 = Math.ceil(answer1 * 100) / 100;
+        rightoneup.innerHTML = "$" + answer1.toFixed(2);
+        answer = firstinputvalue / secondinputvalue + firstinputvalue / secondinputvalue * percent / 100;
+        answer = Math.ceil(answer * 100) / 100;
+        rightonedown.innerHTML = "$" + answer.toFixed(2);
+
+
+    }
 
 });
 
@@ -50,6 +85,13 @@ let rightonedown = document.querySelector(".rightonedown");
 
 insidepercents.forEach(div => {
     div.addEventListener("click", function () {
+        reset.style.backgroundColor = "#9FE8DF";
+        reset.style.opacity = "1";
+        insidepercents.forEach(innerDiv => {
+            innerDiv.style.backgroundColor = "#00474B";
+            innerDiv.style.color = "#FFFFFF";
+
+        });
 
         div.style.backgroundColor = "#9FE8DF";
         div.style.color = "#00474B";
@@ -69,12 +111,14 @@ insidepercents.forEach(div => {
             cantbezero.style.display = "block";
         } else {
             cantbezero.style.display = "none";
-            answer1 = firstinputvalue / secondinputvalue * percent / 100;
-            answer1 = Math.ceil(answer1 * 100) / 100;
-            rightoneup.innerHTML = "$" + answer1;
-            answer = firstinputvalue / secondinputvalue + firstinputvalue / secondinputvalue * percent / 100;
-            answer = Math.ceil(answer * 100) / 100;
-            rightonedown.innerHTML = "$" + answer;
+            if (secondinputvalue != 0 && firstinputvalue != 0) {
+                answer1 = firstinputvalue / secondinputvalue * percent / 100;
+                answer1 = Math.ceil(answer1 * 100) / 100;
+                rightoneup.innerHTML = "$" + answer1.toFixed(2);
+                answer = firstinputvalue / secondinputvalue + firstinputvalue / secondinputvalue * percent / 100;
+                answer = Math.ceil(answer * 100) / 100;
+                rightonedown.innerHTML = "$" + answer.toFixed(2);
+            }
 
         }
 
