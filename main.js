@@ -12,6 +12,11 @@ let secondInput = document.querySelector(".secondInput");
 let custominput = document.querySelector(".custominput");
 
 custominput.addEventListener("input", function () {
+    insidepercents.forEach(innerDiv => {
+        innerDiv.style.backgroundColor = "#00474B";
+        innerDiv.style.color = "#FFFFFF";
+
+    });
     custominput.style.opacity = "1";
     percent = custominput.value;
     reset.style.backgroundColor = "#9FE8DF";
