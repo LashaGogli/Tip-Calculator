@@ -76,7 +76,11 @@
     mix-blend-mode: normal;
     opacity: 0.35;
 
-
+}
+.firstinput::-webkit-inner-spin-button,
+.firstinput::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
 }
 
 .billP {
@@ -145,6 +149,11 @@
 
 
 }
+.custominput::-webkit-inner-spin-button,
+.custominput::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
 
 .numberOfPeople {
     height: 24px;
@@ -181,6 +190,11 @@
     color: #00474B;
     mix-blend-mode: normal;
     opacity: 0.35;
+}
+.secondInput::-webkit-inner-spin-button,
+.secondInput::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
 }
 
 .numberOfPeopleImg {
